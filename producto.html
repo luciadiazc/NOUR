@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Producto | NOUR</title>
+
+<meta
+name="description"
+content="Producto de la colección NOUR."
+id="product-meta-description"
+>
+
+<link
+rel="icon"
+href="assets/icons/icon-nour-burgundy.svg"
+type="image/svg+xml"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Beth+Ellen&amp;display=swap"
+>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&amp;display=swap"
+>
+
+<link
+rel="stylesheet"
+href="css/global.css?v=6"
+>
+
+<link
+rel="stylesheet"
+href="css/producto.css"
+>
+
+<script
+src="js/global.js"
+defer
+></script>
+
+<script src="js/cart.js" defer></script>
+
+<script
+src="js/productos-data.js"
+defer
+></script>
+
+<script
+src="js/producto.js"
+defer
+></script>
+
+</head>
+
+<body class="product-page">
+
+<header
+class="site-header is-visible is-on-light"
+data-cursor-color="wine-burgundy"
+>
+
+<div class="site-header__inner">
+
+<a
+class="site-logo"
+href="index.html"
+aria-label="NOUR — Página de inicio"
+>
+
+<img
+class="site-logo__image site-logo__image--burgundy"
+src="assets/logos/logo-nour-burgundy.svg"
+alt=""
+>
+
+<img
+class="site-logo__image site-logo__image--cream"
+src="assets/logos/logo-nour-cream.svg"
+alt=""
+>
+
+</a>
+
+<button
+class="menu-toggle"
+type="button"
+aria-expanded="false"
+aria-controls="main-navigation"
+>
+MENÚ
+</button>
+
+<nav
+class="site-nav"
+id="main-navigation"
+aria-label="Navegación principal"
+>
+
+<a href="archivo.html">
+EL ARCHIVO
+</a>
+
+<a href="encuentros.html">
+LOS ENCUENTROS
+</a>
+
+<a href="coleccion.html">
+LA COLECCIÓN
+</a>
+
+</nav>
+
+<div
+class="site-actions product-header-actions"
+id="account-access"
+>
+
+<a
+  class="product-cart-link site-cart-link"
+  href="cesta.html"
+  aria-label="Cesta"
+>
+  <span class="site-cart-label">CESTA ·</span>
+  <svg
+    class="site-cart-icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M3 10h18l-2 10H5L3 10Z" />
+    <path d="m7 10 4-6m6 6-4-6M9 13v4m6-4v4" />
+  </svg>
+  <span id="cart-count">0</span>
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<article
+class="product-detail control-theme--light"
+data-header-theme="light"
+data-cursor-color="wine-burgundy"
+aria-labelledby="product-title"
+>
+
+<div class="container">
+
+<div class="grid product-detail__grid">
+
+<div class="product-visual">
+
+<nav
+class="product-breadcrumb"
+aria-label="Migas de pan"
+>
+
+<ol class="breadcrumb">
+
+<li>
+<a href="coleccion.html">
+LA COLECCIÓN
+</a>
+</li>
+
+<li aria-hidden="true">
+/
+</li>
+
+<li>
+<a
+href="coleccion.html"
+id="product-category-link"
+>
+CATEGORÍA
+</a>
+</li>
+
+<li aria-hidden="true">
+/
+</li>
+
+<li
+id="product-breadcrumb-current"
+aria-current="page"
+>
+PRODUCTO
+</li>
+
+</ol>
+
+</nav>
+
+<div class="product-gallery">
+
+<div
+class="product-gallery__thumbs"
+id="product-thumbnails"
+role="group"
+aria-label="Imágenes del producto"
+></div>
+
+<figure class="product-gallery__main">
+
+<img
+id="product-main-image"
+src="assets/images/nour-space.png"
+alt=""
+>
+
+</figure>
+
+</div>
+
+</div>
+
+<section
+class="product-detail__information"
+aria-label="Información del producto"
+>
+
+<p
+class="label product-detail__eyebrow"
+id="product-eyebrow"
+>
+NOUR / COLECCIÓN
+</p>
+
+<h1
+class="display-s product-detail__title"
+id="product-title"
+>
+Producto
+</h1>
+
+<p
+class="label product-detail__weight"
+id="product-meta"
+></p>
+
+<p
+class="body-text product-detail__description"
+id="product-description"
+></p>
+
+<p
+class="product-detail__price"
+id="product-price"
+></p>
+
+<fieldset
+class="product-option"
+id="product-option"
+hidden
+>
+
+<legend
+class="label"
+id="product-option-label"
+></legend>
+
+<div
+class="product-option__choices"
+id="product-option-choices"
+></div>
+
+</fieldset>
+
+<div class="product-purchase">
+
+<div
+class="product-quantity"
+role="group"
+aria-label="Cantidad"
+>
+
+<button
+class="icon-button product-quantity__button"
+id="quantity-decrease"
+type="button"
+aria-label="Reducir cantidad"
+>
+−
+</button>
+
+<label
+class="visually-hidden"
+for="product-quantity"
+>
+Cantidad
+</label>
+
+<input
+id="product-quantity"
+name="quantity"
+type="number"
+min="1"
+max="9"
+value="1"
+inputmode="numeric"
+>
+
+<button
+class="icon-button product-quantity__button"
+id="quantity-increase"
+type="button"
+aria-label="Aumentar cantidad"
+>
++
+</button>
+
+</div>
+
+<button
+class="button product-add"
+id="product-add"
+type="button"
+data-cursor-color="warm-cream"
+>
+AÑADIR A LA CESTA
+</button>
+
+</div>
+
+<p
+class="body-text-small product-add__status"
+id="product-add-status"
+role="status"
+hidden
+></p>
+
+<div
+class="product-accordions"
+id="product-accordions"
+></div>
+
+<a
+class="text-link product-detail__back"
+href="coleccion.html"
+>
+← VOLVER A LA COLECCIÓN
+</a>
+
+</section>
+
+</div>
+
+</div>
+
+</article>
+
+<div class="product-footer-stage">
+
+<section
+class="product-related"
+data-header-theme="dark"
+data-cursor-color="warm-cream"
+aria-labelledby="related-heading"
+>
+
+<p class="label section-kicker">
+LA COLECCIÓN
+</p>
+
+<div class="container">
+
+<div class="grid product-related__heading">
+
+<h2
+class="display-s product-related__title reveal"
+id="related-heading"
+>
+también puede<br>
+interesarte.
+</h2>
+
+<a
+class="text-link product-related__all"
+href="coleccion.html"
+>
+VER TODO
+</a>
+
+</div>
+
+<div
+class="product-related__grid"
+id="product-related-grid"
+></div>
+
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+<footer
+class="site-footer"
+data-header-theme="dark"
+data-cursor-color="warm-cream"
+>
+
+  <div class="container">
+    <div class="site-footer__intro">
+      <p class="site-footer__statement">habitar el tiempo.</p>
+
+      <nav class="site-footer__links" aria-label="Información de NOUR">
+        <div class="site-footer__secondary-links">
+          <a class="site-footer__link" href="aviso-legal.html">Aviso legal</a>
+          <a class="site-footer__link" href="politica-privacidad.html">Política de privacidad</a>
+          <a class="site-footer__link" href="envios-devoluciones.html">Envíos y devoluciones</a>
+        </div>
+
+        <div class="site-footer__primary-links">
+          <div class="site-footer__social">
+            <img src="assets/icons/instagram.svg" alt="Instagram">
+            <img src="assets/icons/tiktok.svg" alt="TikTok">
+          </div>
+          <a class="site-footer__link" href="que-es-nour.html">¿Qué es NOUR?</a>
+          <a
+            class="site-footer__link"
+            href="https://maps.google.com/?q=Calle+Alfonso+XIII+24,+C%C3%B3rdoba"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visítanos
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__utility">
+      <small class="site-footer__copyright">© 2026 NOUR</small>
+
+      <button class="site-footer__top-button" type="button" data-footer-top>
+        <span>Volver arriba</span>
+        <span class="nour-arrow nour-arrow--up" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-footer__brand" aria-hidden="true">
+    <img src="assets/logos/logo-nour-cream.svg" alt="">
+  </div>
+</footer>
+
+<div
+class="custom-cursor"
+aria-hidden="true"
+></div>
+
+</body>
+</html>

@@ -1,0 +1,460 @@
+/* NOUR — CARTA */
+
+/* BASE */
+
+.carta-page {
+  background-color: var(--warm-cream-light);
+  color: var(--wine-burgundy);
+}
+
+.carta-page main {
+  position: relative;
+  z-index: 1;
+}
+
+/* 01 — HERO */
+
+.carta-hero {
+  position: relative;
+  width: 100%;
+  height: calc(100svh - 56px);
+  min-height: 500px;
+  overflow: hidden;
+  background-color: var(--wine-burgundy);
+  color: var(--warm-cream);
+}
+
+.carta-hero__grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carta-hero__title {
+  position: absolute;
+  top: 45%;
+  left: 28%;
+  width: max-content;
+  margin: 0;
+  translate: 0 -50%;
+  color: var(--warm-cream);
+  font-size: var(--font-size-editorial-xl);
+  font-weight: var(--font-weight-light);
+  line-height: 0.72;
+  letter-spacing: -0.05em;
+  text-transform: none;
+}
+
+.carta-hero__title span {
+  display: block;
+  width: max-content;
+}
+
+.carta-hero__title span:first-child {
+  text-transform: lowercase;
+}
+
+.carta-hero__brand {
+  text-transform: uppercase !important;
+}
+
+.carta-hero__note {
+  position: absolute;
+  top: 67%;
+  left: 56%;
+  width: max-content;
+  margin: 0;
+  color: var(--butter-yellow);
+  rotate: -4deg;
+}
+
+/* 02 — NAVEGACIÓN */
+
+.carta-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  min-height: 56px;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  background-color: var(--warm-cream-light);
+  color: var(--wine-burgundy);
+}
+
+.carta-nav > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.carta-nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-64);
+  width: max-content;
+  height: 100%;
+  margin-inline: auto;
+}
+
+.carta-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-family: var(--font-primary);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  opacity: 0.5;
+  transition: opacity 300ms var(--ease-soft);
+}
+
+.carta-filter::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 13px;
+  left: 0;
+  height: 1px;
+  background-color: currentColor;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: opacity 300ms var(--ease-soft),transform 300ms var(--ease-soft);
+}
+
+.carta-filter:hover,
+.carta-filter:focus-visible,
+.carta-filter.is-active,
+.carta-filter[aria-current="location"] {
+  opacity: 1;
+}
+
+.carta-filter.is-active::after,
+.carta-filter[aria-current="location"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* 03 — CONTENIDO CARTA */
+
+.carta-menu {
+  padding: calc(var(--space-80) + var(--space-64)) 0;
+  background-color: var(--warm-cream-light);
+  color: var(--wine-burgundy);
+}
+
+.carta-category {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  column-gap: var(--grid-gutter);
+  width: 100%;
+  padding-bottom: calc(var(--space-80) + var(--space-80));
+  scroll-margin-top: calc(56px + var(--space-48));
+}
+
+.carta-category--last {
+  padding-bottom: 0;
+}
+
+.carta-category__heading {
+  position: sticky;
+  top: calc(56px + var(--space-48));
+  grid-column: 1/span 4;
+  align-self: start;
+}
+
+.carta-category__label {
+  margin: 0 0 var(--space-24);
+  color: var(--wine-burgundy);
+}
+
+.carta-category__title {
+  margin: 0;
+  color: var(--wine-burgundy);
+  font-weight: var(--font-weight-light);
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+}
+
+.carta-items {
+  grid-column: 5/-1;
+  border-top: 1px solid rgb(68 4 21/0.22);
+}
+
+.carta-item {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  column-gap: var(--space-40);
+  align-items: start;
+  padding: var(--space-24) 0;
+  border-bottom: 1px solid rgb(68 4 21/0.22);
+}
+
+.carta-item__content {
+  min-width: 0;
+}
+
+.carta-item__name {
+  margin: 0;
+  color: var(--wine-burgundy);
+  font-weight: var(--font-weight-light);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+
+.carta-item__description {
+  max-width: 480px;
+  margin: var(--space-8) 0 0;
+  color: var(--wine-burgundy);
+  opacity: 0.68;
+}
+
+.carta-item__price {
+  margin: 0;
+  color: var(--wine-burgundy);
+  font-weight: var(--font-weight-light);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+/* 04 — FRANJA AMARILLA */
+
+.carta-footer-stage {
+  --sticky-footer-scene-height: var(--newsletter-height);
+}
+
+.carta-notes {
+  height: var(--newsletter-height);
+  min-height: var(--newsletter-height);
+  overflow: hidden;
+  background-color: var(--butter-yellow);
+  color: var(--wine-burgundy);
+}
+
+.carta-notes__grid {
+  display: grid;
+  grid-template-columns: repeat(12,minmax(0,1fr));
+  column-gap: var(--grid-gutter);
+  align-content: center;
+  align-items: end;
+  width: 100%;
+  height: 100%;
+}
+
+.carta-notes__title {
+  grid-column: 2/span 5;
+  align-self: end;
+  margin: 0;
+  color: var(--wine-burgundy);
+  font-weight: var(--font-weight-light);
+  line-height: 0.79;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+}
+
+.carta-notes__content {
+  grid-column: 8/span 4;
+  align-self: end;
+}
+
+.carta-notes__content > p {
+  margin: 0;
+}
+
+.carta-notes__small {
+  margin-top: var(--space-24) !important;
+  opacity: 0.62;
+}
+
+/* MÓVIL */
+
+@media (max-width:600px) {
+  .carta-page {
+    --carta-nav-height: 64px;
+    --carta-notes-height: 460px;
+  }
+
+  .carta-hero {
+    height: calc(100svh - var(--carta-nav-height));
+    min-height: 580px;
+  }
+
+  .carta-hero__title {
+    top: 43%;
+    left: var(--page-margin);
+    width: calc(100% - 2 * var(--page-margin));
+    translate: 0 -50%;
+    font-size: clamp(4rem,18vw,5rem);
+    line-height: 0.74;
+  }
+
+  .carta-hero__title span {
+    width: auto;
+  }
+
+  .carta-hero__note {
+    top: auto;
+    right: var(--page-margin);
+    bottom: var(--space-64);
+    left: auto;
+    font-size: var(--font-size-note-small);
+  }
+
+  .carta-nav {
+    height: var(--carta-nav-height);
+    min-height: var(--carta-nav-height);
+  }
+
+  .carta-nav > .container {
+    padding-inline: var(--page-margin);
+  }
+
+  .carta-nav__inner {
+    display: grid;
+    grid-template-columns: repeat(4,minmax(0,1fr));
+    gap: var(--space-8);
+    width: 100%;
+    margin: 0;
+  }
+
+  .carta-filter {
+    min-width: 0;
+    padding-inline: 2px;
+    font-size: 0.625rem;
+    line-height: 1.05;
+    letter-spacing: 0.07em;
+    text-align: center;
+  }
+
+  .carta-filter::after {
+    right: 12%;
+    bottom: 9px;
+    left: 12%;
+  }
+
+  .carta-menu {
+    padding: var(--space-64) 0 var(--space-96);
+  }
+
+  .carta-category {
+    display: block;
+    padding-bottom: var(--space-96);
+    scroll-margin-top: calc(var(--carta-nav-height) + var(--space-24));
+  }
+
+  .carta-category--last {
+    padding-bottom: 0;
+  }
+
+  .carta-category__heading {
+    position: static;
+    display: grid;
+    grid-template-columns: 36px minmax(0,1fr);
+    align-items: start;
+    margin-bottom: var(--space-32);
+  }
+
+  .carta-category__label {
+    margin: 7px 0 0;
+  }
+
+  .carta-category__title {
+    font-size: clamp(2.75rem,13vw,3.5rem);
+    line-height: 0.78;
+  }
+
+  .carta-item {
+    grid-template-columns: minmax(0,1fr) auto;
+    column-gap: var(--space-16);
+    padding: var(--space-20) 0;
+  }
+
+  .carta-item__name {
+    line-height: 0.95;
+  }
+
+  .carta-item__description {
+    max-width: 100%;
+    margin-top: var(--space-8);
+    line-height: 1.2;
+  }
+
+  .carta-item__price {
+    font-size: var(--font-size-body-small);
+    text-align: right;
+  }
+
+  .carta-footer-stage {
+    --sticky-footer-scene-height: var(--carta-notes-height);
+  }
+
+  .carta-notes {
+    height: var(--carta-notes-height);
+    min-height: var(--carta-notes-height);
+  }
+
+  .carta-notes__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-40);
+  }
+
+  .carta-notes__title {
+    width: 100%;
+    font-size: var(--font-size-editorial-m);
+  }
+
+  .carta-notes__content {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 0;
+  }
+
+  .carta-notes__small {
+    margin-top: var(--space-20) !important;
+  }
+}
+
+@media (max-width:380px) {
+  .carta-hero__title {
+    font-size: 3.75rem;
+  }
+
+  .carta-filter {
+    font-size: 0.575rem;
+    letter-spacing: 0.05em;
+  }
+
+  .carta-category__title {
+    font-size: 2.5rem;
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion:reduce) {
+  .carta-filter,
+  .carta-filter::after {
+    transition: none;
+  }
+}

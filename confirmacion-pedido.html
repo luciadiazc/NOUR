@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Pedido confirmado | NOUR</title>
+
+  <meta
+    name="description"
+    content="Tu pedido en NOUR ha sido confirmado."
+  >
+
+  <link
+    rel="icon"
+    href="assets/icons/icon-nour-burgundy.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Beth+Ellen&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/global.css?v=6"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/confirmacion-pedido.css"
+  >
+
+  <script
+    src="js/global.js"
+    defer
+  ></script>
+
+  <script src="js/cart.js" defer></script>
+
+  <script
+    src="js/confirmacion-pedido.js"
+    defer
+  ></script>
+
+</head>
+
+<body class="confirmation-page">
+
+  <header
+    class="site-header is-visible is-on-light"
+    data-cursor-color="wine-burgundy"
+  >
+
+    <div class="site-header__inner">
+
+      <a
+        class="site-logo"
+        href="index.html"
+        aria-label="NOUR — Página de inicio"
+      >
+
+        <img
+          class="site-logo__image site-logo__image--burgundy"
+          src="assets/logos/logo-nour-burgundy.svg"
+          alt=""
+        >
+
+        <img
+          class="site-logo__image site-logo__image--cream"
+          src="assets/logos/logo-nour-cream.svg"
+          alt=""
+        >
+
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENÚ
+      </button>
+
+      <nav
+        class="site-nav"
+        id="main-navigation"
+        aria-label="Navegación principal"
+      >
+
+        <a href="archivo.html">
+          EL ARCHIVO
+        </a>
+
+        <a href="encuentros.html">
+          LOS ENCUENTROS
+        </a>
+
+        <a href="coleccion.html">
+          LA COLECCIÓN
+        </a>
+
+      </nav>
+
+      <div
+        class="site-actions"
+        id="account-access"
+      >
+
+        <a
+          class="site-cart-link"
+          href="cesta.html"
+          aria-label="Cesta"
+        >
+          <span class="site-cart-label">CESTA ·</span>
+          <svg
+            class="site-cart-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 10h18l-2 10H5L3 10Z" />
+            <path d="m7 10 4-6m6 6-4-6M9 13v4m6-4v4" />
+          </svg>
+          <span id="cart-count">0</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="confirmation-footer-stage">
+
+      <section
+        class="confirmation-panel"
+        data-header-theme="light"
+        data-cursor-color="wine-burgundy"
+        aria-labelledby="confirmation-heading"
+      >
+
+        <div class="container">
+
+          <p class="breadcrumb confirmation-status">
+            PEDIDO CONFIRMADO
+          </p>
+
+          <div class="grid confirmation-layout">
+
+            <div class="confirmation-message">
+
+              <h1
+                class="display-l confirmation-message__title"
+                id="confirmation-heading"
+              >
+                ya es<br>
+                tuyo
+              </h1>
+
+              <p class="handwritten-note confirmation-message__note">
+                ahora solo queda<br>
+                que llegue a ti.
+              </p>
+
+            </div>
+
+            <section
+              class="confirmation-order"
+              aria-labelledby="order-summary-heading"
+            >
+
+              <h2
+                class="label confirmation-order__heading"
+                id="order-summary-heading"
+              >
+                TU PEDIDO
+              </h2>
+
+              <dl class="confirmation-order__data">
+
+                <div class="confirmation-order__row">
+
+                  <dt class="label">
+                    PRODUCTOS
+                  </dt>
+
+                  <dd
+                    class="body-text"
+                    id="confirmation-items"
+                  >
+                    —
+                  </dd>
+
+                </div>
+
+                <div class="confirmation-order__row">
+
+                  <dt class="label">
+                    ENTREGA
+                  </dt>
+
+                  <dd
+                    class="body-text"
+                    id="confirmation-delivery"
+                  >
+                    —
+                  </dd>
+
+                </div>
+
+                <div class="confirmation-order__row">
+
+                  <dt class="label">
+                    EMAIL
+                  </dt>
+
+                  <dd
+                    class="body-text"
+                    id="confirmation-email"
+                  >
+                    —
+                  </dd>
+
+                </div>
+
+                <div class="confirmation-order__row confirmation-order__row--total">
+
+                  <dt class="label">
+                    TOTAL
+                  </dt>
+
+                  <dd
+                    class="confirmation-order__total"
+                    id="confirmation-total"
+                  >
+                    —
+                  </dd>
+
+                </div>
+
+              </dl>
+
+              <p
+                class="body-text confirmation-order__message"
+                id="confirmation-message"
+              >
+                Hemos recibido tu pedido.
+              </p>
+
+              <a
+                class="text-link confirmation-order__link"
+                href="coleccion.html"
+              >
+                VOLVER A LA COLECCIÓN
+              </a>
+
+            </section>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer
+    class="site-footer"
+    data-header-theme="dark"
+    data-cursor-color="warm-cream"
+  >
+
+  <div class="container">
+    <div class="site-footer__intro">
+      <p class="site-footer__statement">habitar el tiempo.</p>
+
+      <nav class="site-footer__links" aria-label="Información de NOUR">
+        <div class="site-footer__secondary-links">
+          <a class="site-footer__link" href="aviso-legal.html">Aviso legal</a>
+          <a class="site-footer__link" href="politica-privacidad.html">Política de privacidad</a>
+          <a class="site-footer__link" href="envios-devoluciones.html">Envíos y devoluciones</a>
+        </div>
+
+        <div class="site-footer__primary-links">
+          <div class="site-footer__social">
+            <img src="assets/icons/instagram.svg" alt="Instagram">
+            <img src="assets/icons/tiktok.svg" alt="TikTok">
+          </div>
+          <a class="site-footer__link" href="que-es-nour.html">¿Qué es NOUR?</a>
+          <a
+            class="site-footer__link"
+            href="https://maps.google.com/?q=Calle+Alfonso+XIII+24,+C%C3%B3rdoba"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visítanos
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__utility">
+      <small class="site-footer__copyright">© 2026 NOUR</small>
+
+      <button class="site-footer__top-button" type="button" data-footer-top>
+        <span>Volver arriba</span>
+        <span class="nour-arrow nour-arrow--up" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-footer__brand" aria-hidden="true">
+    <img src="assets/logos/logo-nour-cream.svg" alt="">
+  </div>
+</footer>
+
+  <div
+    class="custom-cursor"
+    aria-hidden="true"
+  ></div>
+
+</body>
+
+</html>

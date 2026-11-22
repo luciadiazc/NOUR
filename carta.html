@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>La carta de NOUR | NOUR</title>
+
+  <meta
+    name="description"
+    content="La carta de NOUR. Café, filtro, té, infusiones y algo para comer sin demasiada prisa."
+  >
+
+  <link
+    rel="icon"
+    href="assets/icons/icon-nour-burgundy.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Beth+Ellen&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/global.css?v=6"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/carta.css"
+  >
+
+  <script
+    src="js/global.js"
+    defer
+  ></script>
+
+  <script src="js/cart.js" defer></script>
+
+  <script
+    src="js/carta.js"
+    defer
+  ></script>
+
+</head>
+
+<body class="carta-page">
+
+  <header
+    class="site-header is-visible is-on-dark"
+    data-cursor-color="warm-cream"
+  >
+
+    <div class="site-header__inner">
+
+      <a
+        class="site-logo"
+        href="index.html"
+        aria-label="NOUR — Página de inicio"
+      >
+
+        <img
+          class="site-logo__image site-logo__image--burgundy"
+          src="assets/logos/logo-nour-burgundy.svg"
+          alt=""
+        >
+
+        <img
+          class="site-logo__image site-logo__image--cream"
+          src="assets/logos/logo-nour-cream.svg"
+          alt=""
+        >
+
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENÚ
+      </button>
+
+      <nav
+        class="site-nav"
+        id="main-navigation"
+        aria-label="Navegación principal"
+      >
+
+        <a href="archivo.html">
+          EL ARCHIVO
+        </a>
+
+        <a href="encuentros.html">
+          LOS ENCUENTROS
+        </a>
+
+        <a href="coleccion.html">
+          LA COLECCIÓN
+        </a>
+
+      </nav>
+
+      <div
+        class="site-actions"
+        id="account-access"
+      >
+
+        <a
+          class="site-cart-link"
+          href="cesta.html"
+          aria-label="Cesta"
+        >
+          <span class="site-cart-label">CESTA ·</span>
+          <svg
+            class="site-cart-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 10h18l-2 10H5L3 10Z" />
+            <path d="m7 10 4-6m6 6-4-6M9 13v4m6-4v4" />
+          </svg>
+          <span id="cart-count">0</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section
+      class="carta-hero"
+      data-header-theme="dark"
+      data-cursor-color="warm-cream"
+      aria-labelledby="carta-heading"
+    >
+
+      <div class="container carta-hero__grid">
+
+        <h1
+          class="carta-hero__title reveal"
+          id="carta-heading"
+        >
+          <span>la carta de</span>
+          <span class="carta-hero__brand">NOUR</span>
+        </h1>
+
+        <p
+          class="
+            handwritten-note
+            carta-hero__note
+            reveal
+            reveal--delay-medium
+          "
+        >
+          para quedarse<br>
+          un rato.
+        </p>
+
+      </div>
+
+    </section>
+
+    <nav
+      class="carta-nav"
+      aria-label="Secciones de la carta"
+      data-header-theme="light"
+      data-cursor-color="wine-burgundy"
+    >
+
+      <div class="container">
+
+        <div class="carta-nav__inner">
+
+          <a
+            class="carta-filter is-active"
+            href="#cafe"
+            data-carta-target="cafe"
+            aria-current="location"
+          >
+            CAFÉ
+          </a>
+
+          <a
+            class="carta-filter"
+            href="#filtro"
+            data-carta-target="filtro"
+          >
+            FILTRO
+          </a>
+
+          <a
+            class="carta-filter"
+            href="#te"
+            data-carta-target="te"
+          >
+            TÉ E INFUSIONES
+          </a>
+
+          <a
+            class="carta-filter"
+            href="#comer"
+            data-carta-target="comer"
+          >
+            ALGO PARA COMER
+          </a>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+    <div
+      class="carta-menu"
+      data-header-theme="light"
+      data-cursor-color="wine-burgundy"
+    >
+
+      <div class="container">
+
+        <section
+          class="carta-category"
+          id="cafe"
+          data-carta-section="cafe"
+          aria-labelledby="cafe-heading"
+        >
+
+          <div class="carta-category__heading">
+
+            <p class="label carta-category__label">
+              01
+            </p>
+
+            <h2
+              class="display-s carta-category__title"
+              id="cafe-heading"
+            >
+              café
+            </h2>
+
+          </div>
+
+          <div class="carta-items">
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Espresso</h3>
+                <p class="body-text-small carta-item__description">
+                  Corto, directo y sin rodeos.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">1,80 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Doble espresso</h3>
+                <p class="body-text-small carta-item__description">
+                  Para cuando uno se queda corto.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,30 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Americano</h3>
+                <p class="body-text-small carta-item__description">
+                  Espresso y agua caliente.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,20 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Cortado</h3>
+                <p class="body-text-small carta-item__description">
+                  Espresso con un poco de leche.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,10 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Café con leche</h3>
+                <p class="body-text-small carta-item__description">
+                  Espresso y leche texturizada.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,50 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Flat white</h3>
+                <p class="body-text-small carta-item__description">
+                  Doble espresso y leche texturizada.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">3,20 €</p>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section
+          class="carta-category"
+          id="filtro"
+          data-carta-section="filtro"
+          aria-labelledby="filtro-heading"
+        >
+
+          <div class="carta-category__heading">
+
+            <p class="label carta-category__label">
+              02
+            </p>
+
+            <h2
+              class="display-s carta-category__title"
+              id="filtro-heading"
+            >
+              filtro
+            </h2>
+
+          </div>
+
+          <div class="carta-items">
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">V60</h3>
+                <p class="body-text-small carta-item__description">
+                  Preparación manual por goteo.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">4,00 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Aeropress</h3>
+                <p class="body-text-small carta-item__description">
+                  Una taza limpia, intensa y equilibrada.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">4,00 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Batch brew</h3>
+                <p class="body-text-small carta-item__description">
+                  Café filtrado del día.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">3,20 €</p>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section
+          class="carta-category"
+          id="te"
+          data-carta-section="te"
+          aria-labelledby="te-heading"
+        >
+
+          <div class="carta-category__heading">
+
+            <p class="label carta-category__label">
+              03
+            </p>
+
+            <h2
+              class="display-s carta-category__title"
+              id="te-heading"
+            >
+              té e<br>
+              infusiones
+            </h2>
+
+          </div>
+
+          <div class="carta-items">
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Té verde</h3>
+                <p class="body-text-small carta-item__description">
+                  Ligero y vegetal.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,80 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Té negro</h3>
+                <p class="body-text-small carta-item__description">
+                  Intenso y aromático.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,80 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Rooibos</h3>
+                <p class="body-text-small carta-item__description">
+                  Sin teína.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,80 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Matcha latte</h3>
+                <p class="body-text-small carta-item__description">
+                  Matcha y leche texturizada.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">3,80 €</p>
+            </article>
+
+          </div>
+
+        </section>
+
+        <section
+          class="carta-category carta-category--last"
+          id="comer"
+          data-carta-section="comer"
+          aria-labelledby="comer-heading"
+        >
+
+          <div class="carta-category__heading">
+
+            <p class="label carta-category__label">
+              04
+            </p>
+
+            <h2
+              class="display-s carta-category__title"
+              id="comer-heading"
+            >
+              algo para<br>
+              comer
+            </h2>
+
+          </div>
+
+          <div class="carta-items">
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Tostada</h3>
+                <p class="body-text-small carta-item__description">
+                  Pan, tomate y aceite de oliva.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">3,50 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Croissant</h3>
+                <p class="body-text-small carta-item__description">
+                  Horneado cada mañana.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">2,80 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Bizcocho del día</h3>
+                <p class="body-text-small carta-item__description">
+                  Pregunta qué ha salido hoy.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">3,50 €</p>
+            </article>
+
+            <article class="carta-item">
+              <div class="carta-item__content">
+                <h3 class="heading-s carta-item__name">Yogur, fruta y granola</h3>
+                <p class="body-text-small carta-item__description">
+                  Yogur natural, fruta de temporada y granola.
+                </p>
+              </div>
+              <p class="body-text carta-item__price">5,50 €</p>
+            </article>
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+
+    <div class="sticky-footer-stage carta-footer-stage">
+
+      <section
+        class="sticky-footer-scene carta-notes"
+        data-header-theme="light"
+        data-cursor-color="wine-burgundy"
+        aria-labelledby="notes-heading"
+      >
+
+        <div class="container carta-notes__grid">
+
+          <h2
+            class="display-m carta-notes__title reveal"
+            id="notes-heading"
+          >
+            pregunta<br>
+            en barra.
+          </h2>
+
+          <div class="carta-notes__content">
+
+            <p class="body-text">
+              Si necesitas información sobre ingredientes,
+              alérgenos o alternativas disponibles,
+              pregúntanos antes de pedir.
+            </p>
+
+            <p class="body-text-small carta-notes__small">
+              Algunos productos pueden cambiar según disponibilidad.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer
+    class="site-footer"
+    data-header-theme="dark"
+    data-cursor-color="warm-cream"
+  >
+
+  <div class="container">
+    <div class="site-footer__intro">
+      <p class="site-footer__statement">habitar el tiempo.</p>
+
+      <nav class="site-footer__links" aria-label="Información de NOUR">
+        <div class="site-footer__secondary-links">
+          <a class="site-footer__link" href="aviso-legal.html">Aviso legal</a>
+          <a class="site-footer__link" href="politica-privacidad.html">Política de privacidad</a>
+          <a class="site-footer__link" href="envios-devoluciones.html">Envíos y devoluciones</a>
+        </div>
+
+        <div class="site-footer__primary-links">
+          <div class="site-footer__social">
+            <img src="assets/icons/instagram.svg" alt="Instagram">
+            <img src="assets/icons/tiktok.svg" alt="TikTok">
+          </div>
+          <a class="site-footer__link" href="que-es-nour.html">¿Qué es NOUR?</a>
+          <a
+            class="site-footer__link"
+            href="https://maps.google.com/?q=Calle+Alfonso+XIII+24,+C%C3%B3rdoba"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visítanos
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__utility">
+      <small class="site-footer__copyright">© 2026 NOUR</small>
+
+      <button class="site-footer__top-button" type="button" data-footer-top>
+        <span>Volver arriba</span>
+        <span class="nour-arrow nour-arrow--up" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-footer__brand" aria-hidden="true">
+    <img src="assets/logos/logo-nour-cream.svg" alt="">
+  </div>
+</footer>
+
+  <div
+    class="custom-cursor"
+    aria-hidden="true"
+  ></div>
+
+</body>
+
+</html>

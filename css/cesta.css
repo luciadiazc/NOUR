@@ -1,0 +1,597 @@
+/* NOUR — CESTA */
+
+.cart-page {
+  --cart-content-height: 680px;
+  --cart-footer-hold: clamp(420px,58vh,680px);
+  background-color: var(--warm-cream-light);
+  color: var(--wine-burgundy);
+}
+
+/* HERO */
+
+.cart-hero {
+  position: relative;
+  width: 100%;
+  padding: calc(var(--header-top) + var(--space-64)) 0 var(--space-40);
+  background-color: var(--warm-cream-light);
+  color: var(--wine-burgundy);
+}
+
+/* BREADCRUMB */
+
+.cart-breadcrumb {
+  width: max-content;
+  margin: 0 0 var(--space-40);
+  margin-left: calc(var(--header-side) - var(--page-margin));
+}
+
+/* TÍTULO */
+
+.cart-hero__composition {
+  min-height: 150px;
+  align-items: start;
+}
+
+.cart-hero__title-group {
+  grid-column: 1/span 5;
+  width: 100%;
+}
+
+.cart-hero__title {
+  margin: 0;
+  text-transform: lowercase;
+}
+
+.cart-hero__note {
+  width: max-content;
+  margin: var(--space-16) 0 0 36%;
+  rotate: -3deg;
+}
+
+/* ESCENA FINAL + FOOTER */
+
+.cart-footer-stage {
+  position: relative;
+  height: calc(var(--cart-content-height) + var(--cart-footer-hold) + var(--footer-height));
+  background-color: var(--warm-cream-light);
+}
+
+/* CONTENIDO */
+
+.cart-content {
+  position: sticky;
+  top: min(0px,calc(100svh - var(--cart-content-height)));
+  z-index: 1;
+  width: 100%;
+  padding-bottom: var(--space-64);
+  background-color: var(--warm-cream-light);
+  color: var(--wine-burgundy);
+}
+
+.cart-layout {
+  align-items: start;
+}
+
+/* PRODUCTOS */
+
+.cart-products {
+  grid-column: 1/span 8;
+  min-width: 0;
+}
+
+.cart-products__list {
+  border-top: 1px solid rgb(68 4 21/0.25);
+}
+
+/* PRODUCTO */
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 180px minmax(0,1fr) auto;
+  column-gap: var(--space-48);
+  align-items: start;
+  padding: var(--space-32) 0;
+  border-bottom: 1px solid rgb(68 4 21/0.25);
+}
+
+/* Imagen */
+
+.cart-item__visual {
+  display: block;
+  width: 180px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  background-color: var(--butter-yellow);
+  line-height: 0;
+}
+
+.cart-item__visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Información */
+
+.cart-item__information {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 180px;
+  padding: 0;
+}
+
+.cart-item__category {
+  margin: 0 0 var(--space-16);
+}
+
+.cart-item__name {
+  margin: 0;
+  font-size: var(--font-size-heading-s);
+  font-weight: var(--font-weight-light);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.cart-item__name a {
+  transition: opacity 300ms ease;
+}
+
+.cart-item__name a:hover {
+  opacity: 0.55;
+}
+
+.cart-item__variant {
+  margin: var(--space-12) 0 0;
+  font-size: var(--font-size-body-small);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+}
+
+/* CONTROLES */
+
+.cart-item__controls {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-32);
+  margin-top: auto;
+}
+
+.cart-quantity {
+  display: grid;
+  grid-template-columns: var(--space-40) 52px var(--space-40);
+  min-height: 48px;
+  border: 1px solid rgb(68 4 21/0.35);
+}
+
+.cart-quantity__button {
+  display: grid;
+  place-items: center;
+  width: var(--space-40);
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  color: var(--wine-burgundy);
+  font-size: var(--font-size-button);
+  line-height: 1;
+  transition: background-color 300ms ease;
+}
+
+.cart-quantity__button:hover {
+  background-color: rgb(68 4 21/0.05);
+}
+
+.cart-quantity input {
+  width: 52px;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+  color: var(--wine-burgundy);
+  font-size: var(--font-size-button);
+  line-height: 1;
+  text-align: center;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.cart-quantity input::-webkit-outer-spin-button,
+.cart-quantity input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+/* Eliminar */
+
+.cart-item__remove {
+  position: relative;
+  align-self: flex-end;
+  padding: 0 0 var(--space-4);
+  border: 0;
+  background-color: transparent;
+  color: var(--wine-burgundy);
+  font-size: var(--font-size-label);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: opacity 300ms ease;
+}
+
+.cart-item__remove::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: currentColor;
+}
+
+.cart-item__remove:hover {
+  opacity: 0.55;
+}
+
+/* Precio */
+
+.cart-item__price {
+  align-self: start;
+  min-width: 92px;
+  margin: 0;
+  font-size: var(--font-size-heading-xs);
+  font-weight: var(--font-weight-light);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* RESUMEN AMARILLO */
+
+.cart-summary {
+  grid-column: 9/span 4;
+  align-self: start;
+  margin-left: var(--space-64);
+}
+
+.cart-summary__inner {
+  width: 100%;
+  padding: var(--space-40) var(--space-40) var(--space-32);
+  background-color: var(--butter-yellow);
+  color: var(--wine-burgundy);
+}
+
+.cart-summary__label {
+  margin: 0 0 var(--space-24);
+}
+
+.cart-summary__title {
+  margin: 0 0 var(--space-32);
+}
+
+/* Datos */
+
+.cart-summary__data {
+  margin: 0;
+  border-top: 1px solid rgb(68 4 21/0.3);
+  border-bottom: 1px solid rgb(68 4 21/0.3);
+}
+
+.cart-summary__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  min-height: var(--space-48);
+  border-bottom: 1px solid rgb(68 4 21/0.3);
+}
+
+.cart-summary__row:last-child {
+  border-bottom: 0;
+}
+
+.cart-summary__row dt,
+.cart-summary__row dd {
+  margin: 0;
+}
+
+.cart-summary__row--total {
+  min-height: var(--space-64);
+}
+
+.cart-summary__total {
+  margin: 0;
+  font-size: var(--font-size-heading-m);
+  font-weight: var(--font-weight-regular);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+}
+
+/* Envío */
+
+.cart-summary__shipping {
+  max-width: 340px;
+  margin: var(--space-24) 0;
+}
+
+/* Acciones */
+
+.cart-summary__checkout {
+  width: 100%;
+}
+
+.cart-summary__checkout.is-disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.cart-summary__continue {
+  display: flex;
+  width: fit-content;
+  margin: var(--space-24) auto 0;
+}
+
+/* CESTA VACÍA */
+
+.cart-empty {
+  min-height: 380px;
+  padding: var(--space-32) 0 var(--space-64);
+  border-top: 1px solid rgb(68 4 21/0.25);
+}
+
+.cart-empty__label {
+  margin: 0 0 var(--space-32);
+}
+
+.cart-empty__title {
+  margin: 0 0 var(--space-24);
+}
+
+.cart-empty__text {
+  max-width: 360px;
+  margin: 0 0 var(--space-32);
+}
+
+@media (max-width:600px) {
+  .cart-hero {
+    padding-top: calc(var(--header-top) + var(--space-64));
+  }
+
+  .cart-breadcrumb {
+    margin-left: calc(var(--header-side) - var(--page-margin));
+    margin-bottom: var(--space-32);
+  }
+
+  .cart-hero__composition {
+    min-height: 130px;
+  }
+
+  .cart-hero__title-group {
+    grid-column: 1/span 5;
+  }
+
+  .cart-hero__note {
+    margin-left: 36%;
+  }
+
+  .cart-products {
+    grid-column: 1/span 5;
+  }
+
+  .cart-item {
+    grid-template-columns: 128px minmax(0,1fr);
+    column-gap: var(--space-24);
+  }
+
+  .cart-item__visual {
+    width: 128px;
+  }
+
+  .cart-item__information {
+    min-height: 128px;
+  }
+
+  .cart-item__category {
+    margin-bottom: var(--space-8);
+  }
+
+  .cart-item__name {
+    padding-right: var(--space-80);
+    font-size: var(--font-size-heading-xs);
+  }
+
+  .cart-item__variant {
+    margin-top: var(--space-8);
+  }
+
+  .cart-item__price {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+    font-size: var(--font-size-subtitle);
+  }
+
+  .cart-item__controls {
+    gap: var(--space-20);
+  }
+
+  .cart-quantity {
+    grid-template-columns: 36px 44px 36px;
+    min-height: 44px;
+  }
+
+  .cart-quantity__button {
+    width: 36px;
+  }
+
+  .cart-quantity input {
+    width: 44px;
+  }
+
+  .cart-summary {
+    grid-column: 6/span 3;
+    margin-left: 0;
+  }
+
+  .cart-summary__inner {
+    padding: var(--space-32) var(--space-24);
+  }
+
+  .cart-summary__label {
+    margin-bottom: var(--space-20);
+  }
+
+  .cart-summary__title {
+    margin-bottom: var(--space-24);
+  }
+
+  .cart-summary__shipping {
+    margin: var(--space-20) 0;
+  }
+
+  .cart-summary__continue {
+    margin-top: var(--space-20);
+  }
+
+  .cart-page {
+    --cart-footer-hold: var(--space-64);
+  }
+
+  .cart-hero {
+    padding: var(--space-80) 0 var(--space-40);
+  }
+
+  .cart-breadcrumb {
+    margin: 0 0 var(--space-32);
+    margin-left: calc(var(--header-side) - var(--page-margin));
+  }
+
+  .cart-hero__composition {
+    display: block;
+    min-height: 120px;
+  }
+
+  .cart-hero__title-group {
+    width: 100%;
+  }
+
+  .cart-hero__note {
+    margin: var(--space-12) 0 0 36%;
+  }
+
+  .cart-footer-stage {
+    height: calc(var(--cart-content-height) + var(--cart-footer-hold) + var(--footer-height));
+    padding-bottom: 0;
+  }
+
+  .cart-content {
+    position: sticky;
+    top: min(0px,calc(100svh - var(--cart-content-height)));
+    padding-bottom: var(--space-64);
+  }
+
+  .cart-products,
+  .cart-summary {
+    grid-column: 1/-1;
+  }
+
+  .cart-item {
+    position: relative;
+    grid-template-columns: 96px minmax(0,1fr);
+    column-gap: var(--space-16);
+    padding: var(--space-24) 0;
+  }
+
+  .cart-item__visual {
+    width: 96px;
+  }
+
+  .cart-item__information {
+    min-height: 96px;
+  }
+
+  .cart-item__category {
+    margin-bottom: var(--space-4);
+  }
+
+  .cart-item__name {
+    padding-right: var(--space-64);
+    font-size: var(--font-size-subtitle);
+    line-height: 1;
+  }
+
+  .cart-item__variant {
+    margin-top: var(--space-4);
+  }
+
+  .cart-item__price {
+    position: absolute;
+    top: var(--space-24);
+    right: 0;
+    min-width: 0;
+    font-size: var(--font-size-body);
+  }
+
+  .cart-item__controls {
+    flex-wrap: wrap;
+    gap: var(--space-8) var(--space-16);
+    margin-top: var(--space-16);
+  }
+
+  .cart-quantity {
+    grid-template-columns: var(--space-32) var(--space-40) var(--space-32);
+    min-height: var(--space-40);
+  }
+
+  .cart-quantity__button {
+    width: var(--space-32);
+  }
+
+  .cart-quantity input {
+    width: var(--space-40);
+  }
+
+  .cart-summary {
+    margin-top: var(--space-48);
+  }
+
+  .cart-summary__inner {
+    padding: var(--space-32) var(--space-24);
+  }
+
+  .cart-summary__label {
+    margin-bottom: var(--space-20);
+  }
+
+  .cart-summary__title {
+    margin-bottom: var(--space-24);
+  }
+
+  .cart-summary__shipping {
+    max-width: 100%;
+    margin: var(--space-20) 0;
+  }
+
+  .cart-summary__continue {
+    margin-top: var(--space-20);
+  }
+
+  .cart-empty {
+    min-height: 320px;
+    padding-top: var(--space-32);
+  }
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion:reduce) {
+  .cart-item__name a,
+  .cart-item__remove,
+  .cart-quantity__button {
+    transition: none;
+  }
+}

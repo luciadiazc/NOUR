@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Reserva confirmada | NOUR</title>
+
+  <meta
+    name="description"
+    content="Tu plaza para uno de los encuentros de NOUR ha sido reservada."
+  >
+
+  <link
+    rel="icon"
+    href="assets/icons/icon-nour-burgundy.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Beth+Ellen&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/global.css?v=6"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/confirmacion-reserva.css"
+  >
+
+  <script
+    src="js/global.js"
+    defer
+  ></script>
+
+  <script src="js/cart.js" defer></script>
+
+  <script
+    src="js/confirmacion-reserva.js"
+    defer
+  ></script>
+
+</head>
+
+<body class="confirmation-page reservation-confirmation-page">
+
+  <!-- Header -->
+
+  <header
+    class="site-header is-visible is-on-dark"
+    data-cursor-color="warm-cream"
+  >
+
+    <div class="site-header__inner">
+
+      <a
+        class="site-logo"
+        href="index.html"
+        aria-label="NOUR — Página de inicio"
+      >
+
+        <img
+          class="site-logo__image site-logo__image--burgundy"
+          src="assets/logos/logo-nour-burgundy.svg"
+          alt=""
+        >
+
+        <img
+          class="site-logo__image site-logo__image--cream"
+          src="assets/logos/logo-nour-cream.svg"
+          alt=""
+        >
+
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENÚ
+      </button>
+
+      <nav
+        class="site-nav"
+        id="main-navigation"
+        aria-label="Navegación principal"
+      >
+
+        <a href="archivo.html">
+          EL ARCHIVO
+        </a>
+
+        <a
+          href="encuentros.html"
+          aria-current="page"
+        >
+          LOS ENCUENTROS
+        </a>
+
+        <a href="coleccion.html">
+          LA COLECCIÓN
+        </a>
+
+      </nav>
+
+      <div
+        class="site-actions"
+        id="account-access"
+      >
+
+        <a
+          class="site-cart-link"
+          href="cesta.html"
+          aria-label="Cesta"
+        >
+          <span class="site-cart-label">CESTA ·</span>
+          <svg
+            class="site-cart-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 10h18l-2 10H5L3 10Z" />
+            <path d="m7 10 4-6m6 6-4-6M9 13v4m6-4v4" />
+          </svg>
+          <span id="cart-count">0</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- Main -->
+
+  <main>
+
+    <div class="confirmation-footer-stage">
+
+      <section
+        class="confirmation-panel control-theme--burgundy"
+        data-header-theme="dark"
+        data-cursor-color="warm-cream"
+        aria-labelledby="confirmation-heading"
+      >
+
+        <div class="container">
+
+          <p class="breadcrumb confirmation-status">
+            RESERVA CONFIRMADA
+          </p>
+
+          <div class="grid confirmation-layout">
+
+            <div class="confirmation-message">
+
+              <h1
+                class="display-l confirmation-message__title"
+                id="confirmation-heading"
+              >
+                ya tienes<br>
+                tu sitio
+              </h1>
+
+              <p class="handwritten-note confirmation-message__note">
+                ahora solo queda<br>
+                encontrarnos.
+              </p>
+
+            </div>
+
+          </div>
+
+          <section
+            class="confirmation-event"
+            aria-labelledby="confirmed-event-title"
+          >
+
+            <div class="grid confirmation-event__grid">
+
+              <div class="confirmation-event__main">
+
+                <time
+                  class="confirmation-event__date"
+                  id="confirmed-event-date"
+                  datetime="2026-09-23"
+                >
+
+                  <span
+                    class="confirmation-event__day"
+                    id="confirmed-event-day"
+                  >
+                    23
+                  </span>
+
+                  <span
+                    class="confirmation-event__month"
+                    id="confirmed-event-month"
+                  >
+                    09
+                  </span>
+
+                </time>
+
+                <div class="confirmation-event__identity">
+
+                  <p
+                    class="label confirmation-event__type"
+                    id="confirmed-event-type"
+                  >
+                    CLUB DE LECTURA
+                  </p>
+
+                  <h2
+                    class="confirmation-event__title"
+                    id="confirmed-event-title"
+                  >
+
+                    <span class="confirmation-event__title-line">
+                      Sostener
+                    </span>
+
+                    <span class="confirmation-event__title-line">
+                      la calma
+                    </span>
+
+                  </h2>
+
+                </div>
+
+              </div>
+
+              <div class="confirmation-event__aside">
+
+                <dl class="confirmation-event__data">
+
+                  <div class="confirmation-event__data-row">
+
+                    <dt class="label">
+                      HORA
+                    </dt>
+
+                    <dd
+                      class="body-text-small"
+                      id="confirmed-event-time"
+                    >
+                      19:00
+                    </dd>
+
+                  </div>
+
+                  <div class="confirmation-event__data-row">
+
+                    <dt class="label">
+                      LUGAR
+                    </dt>
+
+                    <dd
+                      class="body-text-small"
+                      id="confirmed-event-place"
+                    >
+                      NOUR
+                    </dd>
+
+                  </div>
+
+                  <div class="confirmation-event__data-row">
+
+                    <dt class="label">
+                      PLAZAS
+                    </dt>
+
+                    <dd
+                      class="body-text-small"
+                      id="confirmed-event-seats"
+                    >
+                      1
+                    </dd>
+
+                  </div>
+
+                </dl>
+
+                <a
+                  class="text-link confirmation-event__link"
+                  href="encuentros.html"
+                >
+                  VER OTROS ENCUENTROS
+                </a>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Footer global -->
+
+  <footer
+    class="site-footer"
+    data-header-theme="dark"
+    data-cursor-color="warm-cream"
+  >
+
+  <div class="container">
+    <div class="site-footer__intro">
+      <p class="site-footer__statement">habitar el tiempo.</p>
+
+      <nav class="site-footer__links" aria-label="Información de NOUR">
+        <div class="site-footer__secondary-links">
+          <a class="site-footer__link" href="aviso-legal.html">Aviso legal</a>
+          <a class="site-footer__link" href="politica-privacidad.html">Política de privacidad</a>
+          <a class="site-footer__link" href="envios-devoluciones.html">Envíos y devoluciones</a>
+        </div>
+
+        <div class="site-footer__primary-links">
+          <div class="site-footer__social">
+            <img src="assets/icons/instagram.svg" alt="Instagram">
+            <img src="assets/icons/tiktok.svg" alt="TikTok">
+          </div>
+          <a class="site-footer__link" href="que-es-nour.html">¿Qué es NOUR?</a>
+          <a
+            class="site-footer__link"
+            href="https://maps.google.com/?q=Calle+Alfonso+XIII+24,+C%C3%B3rdoba"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visítanos
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__utility">
+      <small class="site-footer__copyright">© 2026 NOUR</small>
+
+      <button class="site-footer__top-button" type="button" data-footer-top>
+        <span>Volver arriba</span>
+        <span class="nour-arrow nour-arrow--up" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-footer__brand" aria-hidden="true">
+    <img src="assets/logos/logo-nour-cream.svg" alt="">
+  </div>
+</footer>
+
+  <div
+    class="custom-cursor"
+    aria-hidden="true"
+  ></div>
+
+</body>
+
+</html>

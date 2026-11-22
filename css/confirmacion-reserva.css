@@ -1,0 +1,212 @@
+/* NOUR — CONFIRMACIÓN DE RESERVA */
+
+.reservation-confirmation-page {
+  --confirmation-footer-hold: clamp(360px,46vh,520px);
+  --confirmation-table-lift: 18px;
+  --confirmation-event-zone-height: clamp(250px,31vh,340px);
+  background-color: var(--wine-burgundy-dark);
+  color: var(--warm-cream);
+}
+
+.reservation-confirmation-page .confirmation-footer-stage {
+  position: relative;
+  height: calc(
+    100svh +
+    var(--confirmation-footer-hold) +
+    var(--footer-height)
+  );
+  background-color: var(--wine-burgundy-dark);
+}
+
+.reservation-confirmation-page .confirmation-panel {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  min-height: 680px;
+  padding: calc(var(--header-top) + var(--space-64)) 0 var(--space-48);
+  overflow: hidden;
+  background-color: var(--wine-burgundy-dark);
+  color: var(--warm-cream);
+}
+
+.reservation-confirmation-page .confirmation-status {
+  width: max-content;
+  margin: 0 0 var(--space-40);
+  margin-left: calc(var(--header-side) - var(--page-margin));
+}
+
+.reservation-confirmation-page .confirmation-message {
+  grid-column: 1/span 5;
+}
+
+.reservation-confirmation-page .confirmation-message__title {
+  margin: 0;
+  color: var(--warm-cream);
+  text-transform: lowercase;
+}
+
+.reservation-confirmation-page .confirmation-message__note {
+  width: max-content;
+  margin: var(--space-16) 0 0 38%;
+  rotate: -3deg;
+}
+
+.confirmation-event {
+  margin-top: var(--space-48);
+  min-height: var(--confirmation-event-zone-height);
+  border-top: 1px solid rgb(243 232 215/0.34);
+  display: flex;
+  align-items: center;
+}
+
+.confirmation-event__grid {
+  width: 100%;
+  align-items: center;
+}
+
+.confirmation-event__main {
+  grid-column: 1/span 7;
+  display: grid;
+  grid-template-columns: max-content minmax(0,1fr);
+  align-items: end;
+  column-gap: var(--space-48);
+}
+
+.confirmation-event__date {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  width: clamp(92px,8.55vw,128px);
+  height: 78px;
+}
+
+.confirmation-event__day {
+  font-size: var(--font-size-display-l);
+  font-weight: var(--font-weight-light);
+  line-height: var(--line-display-xl);
+  letter-spacing: var(--tracking-display);
+}
+
+.confirmation-event__month {
+  margin-top: 2px;
+  font-size: var(--font-size-heading-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+}
+
+.confirmation-event__identity {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.confirmation-event__type {
+  margin-bottom: var(--space-12);
+}
+
+.confirmation-event__title {
+  margin: 0;
+  font-size: var(--font-size-heading-m);
+  font-weight: var(--font-weight-light);
+  line-height: 0.78;
+  letter-spacing: -0.045em;
+}
+
+.confirmation-event__title-line {
+  display: block;
+}
+
+.confirmation-event__link {
+  margin-top: var(--space-24);
+}
+
+.confirmation-event__aside {
+  grid-column: 10/span 3;
+  translate: 0 calc(-1 * var(--confirmation-table-lift));
+}
+
+.confirmation-event__data {
+  margin: 0;
+  border-top: 1px solid rgb(243 232 215/0.34);
+  border-bottom: 1px solid rgb(243 232 215/0.34);
+}
+
+.confirmation-event__data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: var(--space-48);
+  border-bottom: 1px solid rgb(243 232 215/0.34);
+}
+
+.confirmation-event__data-row:last-child {
+  border-bottom: 0;
+}
+
+.confirmation-event__data-row dt,
+.confirmation-event__data-row dd {
+  margin: 0;
+}
+
+.confirmation-event__data-row dd {
+  text-align: right;
+}
+
+@media (max-width:600px) {
+  .confirmation-event__main {
+    grid-column: 1/span 5;
+    column-gap: var(--space-24);
+  }
+
+  .confirmation-event__aside {
+    grid-column: 6/span 3;
+  }
+
+  .reservation-confirmation-page {
+    --confirmation-footer-hold: var(--space-64);
+  }
+
+  .reservation-confirmation-page .confirmation-footer-stage {
+    --confirmation-mobile-height: var(--footer-scene-height,100svh);
+    height: calc(
+      var(--confirmation-mobile-height) +
+      var(--confirmation-footer-hold) +
+      var(--footer-height)
+    );
+  }
+
+  .reservation-confirmation-page .confirmation-panel {
+    position: sticky;
+    top: calc(100svh - var(--confirmation-mobile-height));
+    height: auto;
+    min-height: 100svh;
+    padding: var(--space-80) 0 var(--space-64);
+    overflow: visible;
+  }
+
+  .reservation-confirmation-page .confirmation-layout,
+  .confirmation-event__grid {
+    display: block;
+  }
+
+  .confirmation-event {
+    margin-top: var(--space-64);
+    padding-top: var(--space-24);
+  }
+
+  .confirmation-event__main {
+    display: grid;
+    grid-template-columns: max-content minmax(0,1fr);
+    column-gap: var(--space-24);
+  }
+
+  .confirmation-event__month {
+    margin-top: -4px;
+  }
+
+  .confirmation-event__aside {
+    width: 100%;
+    margin-top: var(--space-48);
+    translate: 0;
+  }
+}

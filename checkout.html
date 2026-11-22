@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>Finalizar pedido | NOUR</title>
+
+<meta
+name="description"
+content="Finaliza tu pedido en NOUR."
+>
+
+<link
+rel="icon"
+href="assets/icons/icon-nour-burgundy.svg"
+type="image/svg+xml"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.googleapis.com"
+>
+
+<link
+rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin
+>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Beth+Ellen&amp;display=swap"
+>
+
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&amp;display=swap"
+>
+
+<link
+rel="stylesheet"
+href="css/global.css?v=6"
+>
+
+<link
+rel="stylesheet"
+href="css/checkout.css"
+>
+
+<script
+src="js/global.js"
+defer
+></script>
+
+<script src="js/cart.js" defer></script>
+
+<script
+src="js/productos-data.js"
+defer
+></script>
+
+<script
+src="js/checkout.js"
+defer
+></script>
+
+</head>
+
+<body class="checkout-page">
+
+<header
+class="site-header is-visible is-on-light"
+data-cursor-color="wine-burgundy"
+>
+
+<div class="site-header__inner">
+
+<a
+class="site-logo"
+href="index.html"
+aria-label="NOUR — Página de inicio"
+>
+
+<img
+class="site-logo__image site-logo__image--burgundy"
+src="assets/logos/logo-nour-burgundy.svg"
+alt=""
+>
+
+<img
+class="site-logo__image site-logo__image--cream"
+src="assets/logos/logo-nour-cream.svg"
+alt=""
+>
+
+</a>
+
+<button
+class="menu-toggle"
+type="button"
+aria-expanded="false"
+aria-controls="main-navigation"
+>
+MENÚ
+</button>
+
+<nav
+class="site-nav"
+id="main-navigation"
+aria-label="Navegación principal"
+>
+
+<a href="archivo.html">
+EL ARCHIVO
+</a>
+
+<a href="encuentros.html">
+LOS ENCUENTROS
+</a>
+
+<a href="coleccion.html">
+LA COLECCIÓN
+</a>
+
+</nav>
+
+<div
+class="site-actions"
+id="account-access"
+>
+
+<a
+  class="site-cart-link"
+  href="cesta.html"
+  aria-label="Cesta"
+>
+  <span class="site-cart-label">CESTA ·</span>
+  <svg
+    class="site-cart-icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M3 10h18l-2 10H5L3 10Z" />
+    <path d="m7 10 4-6m6 6-4-6M9 13v4m6-4v4" />
+  </svg>
+  <span id="cart-count">0</span>
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<main>
+
+<section
+class="checkout-hero"
+data-header-theme="light"
+data-cursor-color="wine-burgundy"
+aria-labelledby="checkout-heading"
+>
+
+<div class="container">
+
+<nav
+class="checkout-breadcrumb"
+aria-label="Migas de pan"
+>
+
+<ol class="breadcrumb">
+
+<li>
+<a href="cesta.html">
+CESTA
+</a>
+</li>
+
+<li aria-hidden="true">
+/
+</li>
+
+<li aria-current="page">
+FINALIZAR PEDIDO
+</li>
+
+</ol>
+
+</nav>
+
+<div class="grid checkout-hero__composition">
+
+<div class="checkout-hero__title-group">
+
+<h1
+class="display-l checkout-hero__title"
+id="checkout-heading"
+>
+casi<br>
+está.
+</h1>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<div class="checkout-footer-stage">
+
+<section
+class="checkout-content control-theme--light"
+data-header-theme="light"
+data-cursor-color="wine-burgundy"
+aria-label="Finalizar pedido"
+>
+
+<div class="container">
+
+<div class="grid checkout-layout">
+
+<form
+class="checkout-form"
+id="checkout-form"
+novalidate
+>
+
+<fieldset class="checkout-section">
+
+<legend class="visually-hidden">
+Datos de contacto
+</legend>
+
+<div class="checkout-section__header">
+
+<span class="label checkout-section__number">
+01
+</span>
+
+<h2 class="heading-l checkout-section__title">
+tus datos
+</h2>
+
+</div>
+
+<div class="checkout-fields">
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-name"
+>
+NOMBRE
+</label>
+
+<input
+class="form-input"
+id="checkout-name"
+name="name"
+type="text"
+autocomplete="given-name"
+required
+>
+
+</div>
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-surname"
+>
+APELLIDOS
+</label>
+
+<input
+class="form-input"
+id="checkout-surname"
+name="surname"
+type="text"
+autocomplete="family-name"
+required
+>
+
+</div>
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-email"
+>
+EMAIL
+</label>
+
+<input
+class="form-input"
+id="checkout-email"
+name="email"
+type="email"
+autocomplete="email"
+required
+>
+
+</div>
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-phone"
+>
+TELÉFONO
+</label>
+
+<input
+class="form-input"
+id="checkout-phone"
+name="phone"
+type="tel"
+autocomplete="tel"
+>
+
+</div>
+
+</div>
+
+</fieldset>
+
+<fieldset class="checkout-section">
+
+<legend class="visually-hidden">
+Método de entrega
+</legend>
+
+<div class="checkout-section__header">
+
+<span class="label checkout-section__number">
+02
+</span>
+
+<h2 class="heading-l checkout-section__title">
+cómo<br>
+recibirlo
+</h2>
+
+</div>
+
+<div class="checkout-delivery">
+
+<div class="checkout-choice">
+
+<input
+class="checkout-choice__input"
+id="delivery-pickup"
+name="delivery"
+type="radio"
+value="pickup"
+checked
+>
+
+<label
+class="checkout-choice__label"
+for="delivery-pickup"
+>
+
+<span class="label">
+RECOGIDA EN NOUR
+</span>
+
+<span class="body-text-small checkout-choice__description">
+Recoge tu pedido directamente
+en el espacio NOUR de Córdoba.
+</span>
+
+</label>
+
+</div>
+
+<div class="checkout-choice">
+
+<input
+class="checkout-choice__input"
+id="delivery-shipping"
+name="delivery"
+type="radio"
+value="shipping"
+>
+
+<label
+class="checkout-choice__label"
+for="delivery-shipping"
+>
+
+<span class="label">
+ENVÍO A DOMICILIO
+</span>
+
+<span class="body-text-small checkout-choice__description">
+Recibe el pedido en la dirección
+que nos indiques.
+</span>
+
+</label>
+
+</div>
+
+</div>
+
+<div
+class="checkout-shipping"
+id="shipping-fields"
+hidden
+>
+
+<div class="checkout-fields">
+
+<div class="form-field checkout-field--full">
+
+<label
+class="form-label"
+for="checkout-address"
+>
+DIRECCIÓN
+</label>
+
+<input
+class="form-input"
+id="checkout-address"
+name="address"
+type="text"
+autocomplete="street-address"
+>
+
+</div>
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-postal"
+>
+CÓDIGO POSTAL
+</label>
+
+<input
+class="form-input"
+id="checkout-postal"
+name="postal"
+type="text"
+autocomplete="postal-code"
+>
+
+</div>
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-city"
+>
+CIUDAD
+</label>
+
+<input
+class="form-input"
+id="checkout-city"
+name="city"
+type="text"
+autocomplete="address-level2"
+>
+
+</div>
+
+<div class="form-field checkout-field--full">
+
+<label
+class="form-label"
+for="checkout-province"
+>
+PROVINCIA
+</label>
+
+<input
+class="form-input"
+id="checkout-province"
+name="province"
+type="text"
+autocomplete="address-level1"
+>
+
+</div>
+
+</div>
+
+</div>
+
+</fieldset>
+
+<fieldset class="checkout-section">
+
+<legend class="visually-hidden">
+Pago
+</legend>
+
+<div class="checkout-section__header">
+
+<span class="label checkout-section__number">
+03
+</span>
+
+<h2 class="heading-l checkout-section__title">
+pago
+</h2>
+
+</div>
+
+<div class="checkout-payment">
+
+<div class="checkout-payment__header">
+
+<span class="label">
+TARJETA
+</span>
+
+<span class="checkout-payment__status">
+
+<span
+class="checkout-payment__dot"
+aria-hidden="true"
+></span>
+
+<span class="label">
+SELECCIONADO
+</span>
+
+</span>
+
+</div>
+
+<div class="checkout-payment__body">
+
+<div class="checkout-fields">
+
+<div class="form-field checkout-field--full">
+
+<label
+class="form-label"
+for="checkout-card"
+>
+NÚMERO DE TARJETA
+</label>
+
+<input
+class="form-input"
+id="checkout-card"
+name="card"
+type="text"
+inputmode="numeric"
+autocomplete="cc-number"
+placeholder="0000 0000 0000 0000"
+required
+>
+
+</div>
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-expiry"
+>
+CADUCIDAD
+</label>
+
+<input
+class="form-input"
+id="checkout-expiry"
+name="expiry"
+type="text"
+inputmode="numeric"
+autocomplete="cc-exp"
+placeholder="MM / AA"
+required
+>
+
+</div>
+
+<div class="form-field">
+
+<label
+class="form-label"
+for="checkout-cvv"
+>
+CVV
+</label>
+
+<input
+class="form-input"
+id="checkout-cvv"
+name="cvv"
+type="text"
+inputmode="numeric"
+autocomplete="cc-csc"
+placeholder="000"
+required
+>
+
+</div>
+
+</div>
+
+<p class="body-text-small checkout-payment__note">
+Esta interfaz forma parte del prototipo.
+No procesa pagos reales.
+</p>
+
+</div>
+
+</div>
+
+</fieldset>
+
+</form>
+
+<aside
+class="checkout-summary control-theme--yellow"
+aria-labelledby="checkout-summary-heading"
+>
+
+<div class="checkout-summary__inner">
+
+<p class="label checkout-summary__label">
+TU PEDIDO
+</p>
+
+<h2
+class="display-s checkout-summary__title"
+id="checkout-summary-heading"
+>
+lo que<br>
+te llevas.
+</h2>
+
+<ul
+class="checkout-summary__products"
+id="checkout-products"
+aria-label="Productos del pedido"
+></ul>
+
+<dl class="checkout-summary__totals">
+
+<div class="checkout-summary__row">
+
+<dt class="label">
+SUBTOTAL
+</dt>
+
+<dd
+class="body-text-small"
+id="checkout-subtotal"
+>
+0€
+</dd>
+
+</div>
+
+<div class="checkout-summary__row">
+
+<dt class="label">
+ENTREGA
+</dt>
+
+<dd
+class="body-text-small"
+id="checkout-delivery"
+>
+RECOGIDA
+</dd>
+
+</div>
+
+<div class="checkout-summary__row checkout-summary__row--total">
+
+<dt class="label">
+TOTAL
+</dt>
+
+<dd
+class="checkout-summary__total"
+id="checkout-total"
+>
+0€
+</dd>
+
+</div>
+
+</dl>
+
+<p class="body-text-small checkout-summary__note">
+Los gastos de envío, si corresponden,
+se calculan durante el proceso de compra.
+</p>
+
+<button
+class="button checkout-summary__submit"
+id="checkout-submit"
+type="submit"
+form="checkout-form"
+>
+CONFIRMAR PEDIDO
+</button>
+
+<a
+class="text-link checkout-summary__back"
+href="cesta.html"
+>
+VOLVER A LA CESTA
+</a>
+
+</div>
+
+</aside>
+
+</div>
+
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+<footer
+class="site-footer"
+data-header-theme="dark"
+data-cursor-color="warm-cream"
+>
+
+  <div class="container">
+    <div class="site-footer__intro">
+      <p class="site-footer__statement">habitar el tiempo.</p>
+
+      <nav class="site-footer__links" aria-label="Información de NOUR">
+        <div class="site-footer__secondary-links">
+          <a class="site-footer__link" href="aviso-legal.html">Aviso legal</a>
+          <a class="site-footer__link" href="politica-privacidad.html">Política de privacidad</a>
+          <a class="site-footer__link" href="envios-devoluciones.html">Envíos y devoluciones</a>
+        </div>
+
+        <div class="site-footer__primary-links">
+          <div class="site-footer__social">
+            <img src="assets/icons/instagram.svg" alt="Instagram">
+            <img src="assets/icons/tiktok.svg" alt="TikTok">
+          </div>
+          <a class="site-footer__link" href="que-es-nour.html">¿Qué es NOUR?</a>
+          <a
+            class="site-footer__link"
+            href="https://maps.google.com/?q=Calle+Alfonso+XIII+24,+C%C3%B3rdoba"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visítanos
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__utility">
+      <small class="site-footer__copyright">© 2026 NOUR</small>
+
+      <button class="site-footer__top-button" type="button" data-footer-top>
+        <span>Volver arriba</span>
+        <span class="nour-arrow nour-arrow--up" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-footer__brand" aria-hidden="true">
+    <img src="assets/logos/logo-nour-cream.svg" alt="">
+  </div>
+</footer>
+
+<div
+class="custom-cursor"
+aria-hidden="true"
+></div>
+
+</body>
+</html>

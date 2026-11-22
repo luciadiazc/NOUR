@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Reserva | NOUR</title>
+
+  <meta
+    name="description"
+    content="Reserva tu plaza para los encuentros de NOUR."
+  >
+
+  <link
+    rel="icon"
+    href="assets/icons/icon-nour-burgundy.svg"
+    type="image/svg+xml"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Beth+Ellen&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500&amp;display=swap"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/global.css?v=6"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/reservar.css"
+  >
+
+  <script
+    src="js/global.js"
+    defer
+  ></script>
+
+  <script src="js/cart.js" defer></script>
+
+  <script
+    src="js/reservar.js"
+    defer
+  ></script>
+
+</head>
+
+<body class="reservation-page">
+
+  <header
+    class="site-header is-visible is-on-light"
+    data-cursor-color="wine-burgundy"
+  >
+
+    <div class="site-header__inner">
+
+      <a
+        class="site-logo"
+        href="index.html"
+        aria-label="NOUR — Página de inicio"
+      >
+
+        <img
+          class="site-logo__image site-logo__image--burgundy"
+          src="assets/logos/logo-nour-burgundy.svg"
+          alt=""
+        >
+
+        <img
+          class="site-logo__image site-logo__image--cream"
+          src="assets/logos/logo-nour-cream.svg"
+          alt=""
+        >
+
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="main-navigation"
+      >
+        MENÚ
+      </button>
+
+      <nav
+        class="site-nav"
+        id="main-navigation"
+        aria-label="Navegación principal"
+      >
+
+        <a href="archivo.html">
+          EL ARCHIVO
+        </a>
+
+        <a
+          href="encuentros.html"
+          aria-current="page"
+        >
+          LOS ENCUENTROS
+        </a>
+
+        <a href="coleccion.html">
+          LA COLECCIÓN
+        </a>
+
+      </nav>
+
+      <div
+        class="site-actions"
+        id="account-access"
+      >
+
+        <a
+          class="site-cart-link"
+          href="cesta.html"
+          aria-label="Cesta"
+        >
+          <span class="site-cart-label">CESTA ·</span>
+          <svg
+            class="site-cart-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M3 10h18l-2 10H5L3 10Z" />
+            <path d="m7 10 4-6m6 6-4-6M9 13v4m6-4v4" />
+          </svg>
+          <span id="cart-count">0</span>
+        </a>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- Encuentro -->
+
+    <section
+      class="reservation-event control-theme--yellow"
+      data-header-theme="light"
+      data-cursor-color="wine-burgundy"
+      aria-labelledby="reservation-event-title"
+    >
+
+      <div class="container">
+
+        <!-- BREADCRUMB -->
+
+        <nav
+          class="reservation-breadcrumb"
+          aria-label="Migas de pan"
+        >
+
+          <ol class="breadcrumb">
+
+            <li>
+
+              <a href="encuentros.html">
+                LOS ENCUENTROS
+              </a>
+
+            </li>
+
+            <li aria-hidden="true">
+              /
+            </li>
+
+            <li aria-current="page">
+              RESERVA
+            </li>
+
+          </ol>
+
+        </nav>
+
+        <div class="grid reservation-event__grid">
+
+          <!-- FECHA -->
+
+          <div class="reservation-event__date-column">
+
+            <time
+              class="reservation-event__date"
+              id="reservation-event-date"
+              datetime="2026-09-30"
+            >
+
+              <span
+                class="reservation-event__day"
+                id="reservation-event-day"
+              >
+                30
+              </span>
+
+              <span
+                class="reservation-event__month"
+                id="reservation-event-month"
+              >
+                09
+              </span>
+
+            </time>
+
+            <p class="handwritten-note reservation-event__note">
+              esta vez, nos<br>
+              vemos aquí
+            </p>
+
+          </div>
+
+          <!-- IDENTIDAD -->
+
+          <div class="reservation-event__identity">
+
+            <p
+              class="label reservation-event__type"
+              id="reservation-event-type"
+            >
+              MICRO ABIERTO
+            </p>
+
+            <h1
+              class="reservation-event__title"
+              id="reservation-event-title"
+            >
+              ¿De dónde vienen las ideas?
+            </h1>
+
+            <p
+              class="body-text-small reservation-event__description"
+              id="reservation-event-description"
+            >
+              Una conversación sobre los lugares, procesos
+              y momentos desde los que empiezan las ideas.
+            </p>
+
+          </div>
+
+          <!-- DATOS -->
+
+          <dl class="reservation-event__data">
+
+            <div class="reservation-event__data-row">
+
+              <dt class="label">
+                HORA
+              </dt>
+
+              <dd
+                class="label"
+                id="reservation-event-time"
+              >
+                19:30
+              </dd>
+
+            </div>
+
+            <div class="reservation-event__data-row">
+
+              <dt class="label">
+                LUGAR
+              </dt>
+
+              <dd class="label">
+                NOUR
+              </dd>
+
+            </div>
+
+            <div class="reservation-event__data-row">
+
+              <dt class="label">
+                PLAZAS
+              </dt>
+
+              <dd
+                class="label"
+                id="reservation-event-capacity"
+              >
+                24
+              </dd>
+
+            </div>
+
+            <div class="reservation-event__data-row">
+
+              <dt class="label">
+                PRECIO
+              </dt>
+
+              <dd
+                class="label"
+                id="reservation-event-price"
+              >
+                GRATUITO
+              </dd>
+
+            </div>
+
+          </dl>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Formulario -->
+
+    <section
+      class="reservation-form-section control-theme--burgundy"
+      data-header-theme="dark"
+      data-cursor-color="warm-cream"
+      aria-labelledby="reservation-form-heading"
+    >
+
+      <p class="label section-kicker">
+        TU RESERVA
+      </p>
+
+      <div class="container">
+
+        <div class="grid reservation-form-layout">
+
+          <h2
+            class="reservation-form-section__title reveal"
+            id="reservation-form-heading"
+          >
+            guarda<br>
+            tu sitio.
+          </h2>
+
+          <form
+            class="reservation-form"
+            id="reservation-form"
+            novalidate
+          >
+
+            <div class="reservation-form__event">
+
+              <p class="label reservation-form__event-label">
+                ESTÁS RESERVANDO PARA
+              </p>
+
+              <p
+                class="reservation-form__event-title"
+                id="reservation-form-event-title"
+              >
+                ¿De dónde vienen las ideas?
+              </p>
+
+            </div>
+
+            <div class="reservation-form__fields">
+
+              <div class="reservation-field">
+
+                <label
+                  class="label"
+                  for="reservation-name"
+                >
+                  NOMBRE
+                </label>
+
+                <input
+                  class="reservation-input"
+                  id="reservation-name"
+                  name="name"
+                  type="text"
+                  autocomplete="given-name"
+                  required
+                >
+
+              </div>
+
+              <div class="reservation-field">
+
+                <label
+                  class="label"
+                  for="reservation-surname"
+                >
+                  APELLIDOS
+                </label>
+
+                <input
+                  class="reservation-input"
+                  id="reservation-surname"
+                  name="surname"
+                  type="text"
+                  autocomplete="family-name"
+                  required
+                >
+
+              </div>
+
+              <div class="reservation-field reservation-field--full">
+
+                <label
+                  class="label"
+                  for="reservation-email"
+                >
+                  EMAIL
+                </label>
+
+                <input
+                  class="reservation-input"
+                  id="reservation-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+
+              </div>
+
+              <div class="reservation-field">
+
+                <label
+                  class="label"
+                  for="reservation-phone"
+                >
+                  TELÉFONO
+                </label>
+
+                <input
+                  class="reservation-input"
+                  id="reservation-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                >
+
+              </div>
+
+              <div class="reservation-field">
+
+                <label
+                  class="label"
+                  for="reservation-seats"
+                >
+                  NÚMERO DE PLAZAS
+                </label>
+
+                <input
+                  class="reservation-input"
+                  id="reservation-seats"
+                  name="seats"
+                  type="number"
+                  min="1"
+                  value="1"
+                  inputmode="numeric"
+                  required
+                >
+
+              </div>
+
+              <div class="reservation-field reservation-field--full">
+
+                <label
+                  class="label"
+                  for="reservation-notes"
+                >
+                  ¿ALGO QUE DEBAMOS SABER? · OPCIONAL
+                </label>
+
+                <textarea
+                  class="reservation-input reservation-textarea"
+                  id="reservation-notes"
+                  name="notes"
+                  rows="2"
+                ></textarea>
+
+              </div>
+
+              <div class="reservation-field reservation-field--full">
+
+                <label class="reservation-privacy">
+
+                  <input
+                    class="reservation-privacy__input"
+                    id="reservation-privacy"
+                    name="privacy"
+                    type="checkbox"
+                    required
+                  >
+
+                  <span class="reservation-privacy__box"></span>
+
+                  <span class="reservation-privacy__text">
+
+                    He leído y acepto la
+
+                    <a href="politica-privacidad.html">
+                      política de privacidad
+                    </a>
+
+                    y el tratamiento de mis datos
+                    para gestionar la reserva.
+
+                  </span>
+
+                </label>
+
+              </div>
+
+              <div class="reservation-form__actions">
+
+                <button
+                  class="circle-button reservation-form__submit"
+                  type="submit"
+                  data-cursor-color="wine-burgundy"
+                >
+
+                  <span>
+                    CONFIRMAR<br>
+                    RESERVA
+                  </span>
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Antes de venir -->
+
+    <div class="reservation-footer-stage">
+
+      <section
+        class="reservation-before"
+        data-header-theme="light"
+        data-cursor-color="wine-burgundy"
+        aria-labelledby="reservation-before-heading"
+      >
+
+        <p class="label section-kicker">
+          ANTES DE VENIR
+        </p>
+
+        <div class="container">
+
+          <div class="grid reservation-before__header">
+
+            <div class="reservation-before__intro">
+
+              <h2
+                class="reservation-before__title reveal"
+                id="reservation-before-heading"
+              >
+                algunas cosas<br>
+                que viene bien<br>
+                saber
+              </h2>
+
+              <p
+                class="body-text-small reservation-before__description reveal reveal--delay-medium"
+              >
+                Queremos que reservar sea sencillo.
+                Si finalmente no puedes venir,
+                avísanos para que otra persona
+                pueda ocupar tu sitio.
+              </p>
+
+            </div>
+
+          </div>
+
+          <ol class="editorial-triptych reservation-before__principles">
+
+            <li class="editorial-triptych__item">
+
+              <span class="label reservation-before__number">
+                01
+              </span>
+
+              <h3 class="editorial-triptych__title">
+                llega<br>
+                con tiempo.
+              </h3>
+
+              <p class="body-text-small editorial-triptych__footer">
+                Recomendamos llegar unos minutos antes
+                del comienzo del encuentro.
+              </p>
+
+            </li>
+
+            <li class="editorial-triptych__item">
+
+              <span class="label reservation-before__number">
+                02
+              </span>
+
+              <h3 class="editorial-triptych__title">
+                tu plaza<br>
+                es tuya
+              </h3>
+
+              <p class="body-text-small editorial-triptych__footer">
+                La reserva quedará vinculada al nombre
+                y al correo indicados en este formulario.
+              </p>
+
+            </li>
+
+            <li class="editorial-triptych__item">
+
+              <span class="label reservation-before__number">
+                03
+              </span>
+
+              <h3 class="editorial-triptych__title">
+                si cambia<br>
+                el plan
+              </h3>
+
+              <p class="body-text-small editorial-triptych__footer">
+                Puedes cancelar tu reserva con antelación
+                para dejar la plaza disponible.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </div>
+
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer
+    class="site-footer reservation-footer"
+    data-header-theme="dark"
+    data-cursor-color="warm-cream"
+  >
+
+  <div class="container">
+    <div class="site-footer__intro">
+      <p class="site-footer__statement">habitar el tiempo.</p>
+
+      <nav class="site-footer__links" aria-label="Información de NOUR">
+        <div class="site-footer__secondary-links">
+          <a class="site-footer__link" href="aviso-legal.html">Aviso legal</a>
+          <a class="site-footer__link" href="politica-privacidad.html">Política de privacidad</a>
+          <a class="site-footer__link" href="envios-devoluciones.html">Envíos y devoluciones</a>
+        </div>
+
+        <div class="site-footer__primary-links">
+          <div class="site-footer__social">
+            <img src="assets/icons/instagram.svg" alt="Instagram">
+            <img src="assets/icons/tiktok.svg" alt="TikTok">
+          </div>
+          <a class="site-footer__link" href="que-es-nour.html">¿Qué es NOUR?</a>
+          <a
+            class="site-footer__link"
+            href="https://maps.google.com/?q=Calle+Alfonso+XIII+24,+C%C3%B3rdoba"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Visítanos
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="site-footer__utility">
+      <small class="site-footer__copyright">© 2026 NOUR</small>
+
+      <button class="site-footer__top-button" type="button" data-footer-top>
+        <span>Volver arriba</span>
+        <span class="nour-arrow nour-arrow--up" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-footer__brand" aria-hidden="true">
+    <img src="assets/logos/logo-nour-cream.svg" alt="">
+  </div>
+</footer>
+
+  <div
+    class="custom-cursor"
+    aria-hidden="true"
+  ></div>
+
+</body>
+
+</html>
