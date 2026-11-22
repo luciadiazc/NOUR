@@ -388,7 +388,7 @@
 
 .collection-end-scene {
   position: sticky;
-  top: calc(100svh - var(--collection-end-scene-height));
+  top: calc(var(--footer-viewport) - var(--collection-end-scene-height));
   z-index: 1;
   width: 100%;
   background: var(--warm-cream-light);
@@ -462,6 +462,10 @@
 }
 
 @media (max-width:600px) {
+  .collection-end-scene {
+    min-height: var(--footer-viewport);
+  }
+
   .collection-page {
     --section-label-top: var(--space-32);
     --collection-newsletter-height: 420px;

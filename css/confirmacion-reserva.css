@@ -167,7 +167,7 @@
   }
 
   .reservation-confirmation-page .confirmation-footer-stage {
-    --confirmation-mobile-height: var(--footer-scene-height,100svh);
+    --confirmation-mobile-height: var(--footer-scene-height,var(--footer-viewport));
     height: calc(
       var(--confirmation-mobile-height) +
       var(--confirmation-footer-hold) +
@@ -177,9 +177,9 @@
 
   .reservation-confirmation-page .confirmation-panel {
     position: sticky;
-    top: calc(100svh - var(--confirmation-mobile-height));
+    top: calc(var(--footer-viewport) - var(--confirmation-mobile-height));
     height: auto;
-    min-height: 100svh;
+    min-height: var(--footer-viewport);
     padding: var(--space-80) 0 var(--space-64);
     overflow: visible;
   }

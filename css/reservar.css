@@ -669,7 +669,7 @@
   }
 
   .reservation-footer-stage {
-    --reservation-before-height: var(--footer-scene-height,100svh);
+    --reservation-before-height: var(--footer-scene-height,var(--footer-viewport));
     height: calc(
       var(--reservation-before-height) +
       var(--reservation-before-hold) +
@@ -679,9 +679,9 @@
 
   .reservation-before {
     position: sticky;
-    top: calc(100svh - var(--reservation-before-height));
+    top: calc(var(--footer-viewport) - var(--reservation-before-height));
     height: auto;
-    min-height: 100svh;
+    min-height: var(--footer-viewport);
     padding: var(--space-96) 0 var(--space-80);
     overflow: visible;
   }

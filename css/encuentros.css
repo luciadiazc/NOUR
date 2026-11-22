@@ -323,6 +323,10 @@
 }
 
 @media (max-width:600px) {
+  .encounters-end-scene {
+    min-height: var(--footer-viewport);
+  }
+
   .encounters-page {
     --encounters-section-top: var(--space-48);
     --encounters-heading-gap: var(--space-48);

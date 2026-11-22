@@ -985,7 +985,6 @@
   }
 
   /* Fotografías */
-  .home-intro-image,
   .space-story__sticky {
     height: 100dvh;
   }
@@ -1243,13 +1242,13 @@
 
   /* Visítanos */
   .footer-reveal-stage {
-    --visit-panel-height: var(--footer-scene-height,100svh);
+    --visit-panel-height: var(--footer-scene-height,var(--footer-viewport));
   }
 
   .visit-panel {
-    top: min(0px,calc(100svh - var(--visit-panel-height)));
+    top: min(0px,calc(var(--footer-viewport) - var(--visit-panel-height)));
     height: auto;
-    min-height: 100svh;
+    min-height: var(--footer-viewport);
   }
 
   .visit-panel__content {
@@ -1257,7 +1256,7 @@
     grid-template-rows: 1fr auto;
     gap: var(--space-40);
     height: auto;
-    min-height: 100svh;
+    min-height: var(--footer-viewport);
     padding: var(--space-64) var(--page-margin);
   }
 

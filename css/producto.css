@@ -518,7 +518,8 @@
 
   .product-related {
     position: sticky;
-    top: min(0px,calc(100svh - var(--product-related-height)));
+    top: min(0px,calc(var(--footer-viewport) - var(--product-related-height)));
+    min-height: var(--footer-viewport);
     padding: calc(var(--space-80) + var(--space-40)) 0 var(--space-64);
   }
 

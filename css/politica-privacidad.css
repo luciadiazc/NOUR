@@ -301,7 +301,9 @@
 
   .privacy-content__grid {
     position: sticky;
-    top: calc(100svh - var(--footer-scene-height,100svh));
+    top: calc(
+      var(--footer-viewport) - var(--footer-scene-height,var(--footer-viewport))
+    );
     display: block;
   }
 

@@ -200,8 +200,8 @@
 
   .confirmation-panel {
     position: sticky;
-    top: min(0px,calc(100svh - var(--confirmation-height)));
-    min-height: 100svh;
+    top: min(0px,calc(var(--footer-viewport) - var(--confirmation-height)));
+    min-height: var(--footer-viewport);
     padding: var(--space-80) 0 var(--space-64);
   }
 

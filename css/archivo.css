@@ -13,7 +13,7 @@
   --archive-issue-image-scale: 1;
   --archive-issue-image-half-height: min(17.482vw,264.17px);
 
-  --archive-closing-height: 100svh;
+  --archive-closing-height: var(--footer-viewport);
   --archive-closing-hold: clamp(440px,58vh,680px);
 
   background-color: var(--wine-burgundy);

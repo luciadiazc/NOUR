@@ -490,7 +490,8 @@
 
   .cart-content {
     position: sticky;
-    top: min(0px,calc(100svh - var(--cart-content-height)));
+    top: min(0px,calc(var(--footer-viewport) - var(--cart-content-height)));
+    min-height: var(--footer-viewport);
     padding-bottom: var(--space-64);
   }
 

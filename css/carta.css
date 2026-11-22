@@ -289,7 +289,7 @@
 @media (max-width:600px) {
   .carta-page {
     --carta-nav-height: 64px;
-    --carta-notes-height: 460px;
+    --carta-notes-height: max(460px,var(--footer-viewport));
   }
 
   .carta-hero {

@@ -75,6 +75,7 @@
   --cursor-size: 10px;
   --ease-soft: cubic-bezier(0.22,1,0.36,1);
   --footer-height: 440px;
+  --footer-viewport: 100svh;
   --section-label-top: var(--space-48);
   --newsletter-height: 340px;
   --sticky-footer-hold: clamp(650px,85vh,900px);
@@ -757,7 +758,7 @@ button.text-link {
 
 .sticky-footer-scene {
   position: sticky;
-  top: calc(100svh - var(--sticky-footer-scene-height));
+  top: calc(var(--footer-viewport) - var(--sticky-footer-scene-height));
   width: 100%;
 }
 
@@ -1264,6 +1265,14 @@ button.text-link {
     color: var(--dusty-olive);
   }
 
+  body {
+    overflow-x: clip;
+  }
+
+  main {
+    isolation: isolate;
+  }
+
   .site-footer {
     padding-top: var(--space-32);
   }
@@ -1320,6 +1329,7 @@ button.text-link {
     --font-size-editorial-s: 2.6875rem;
     --newsletter-height: 420px;
     --sticky-footer-hold: var(--space-64);
+    --footer-viewport: 100dvh;
   }
 
   .editorial-triptych {
