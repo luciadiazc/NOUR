@@ -306,3 +306,6 @@
     translate: 0;
   }
 }
+/* Mostrar la doble página de Mara Luna completa, sin recortes. */
+.origins-spread--second .origins-spread__media { aspect-ratio: 2048 / 1349; }
+.origins-spread--second .origins-spread__media img { object-fit: contain; }

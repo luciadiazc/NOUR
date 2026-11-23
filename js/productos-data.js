@@ -40,7 +40,7 @@ const NOUR_PRODUCTS = {
     description: "El café que servimos en NOUR, también para preparar en casa.",
     price: 12,
     images: [
-      "assets/images/cafe-nour.webp"
+      "assets/images/cafe-nour-coleccion.webp"
     ],
     details: [
       {
@@ -69,7 +69,7 @@ const NOUR_PRODUCTS = {
     description: "Tote Bag NOUR en algodón natural.",
     price: 14,
     images: [
-      "assets/images/tote-1.webp",
+      "assets/images/tote-1-coleccion.webp",
       "assets/images/tote-2.webp",
       "assets/images/tote-3.webp"
     ],
@@ -99,7 +99,7 @@ const NOUR_PRODUCTS = {
     description: "Lanyard NOUR.",
     price: 8,
     images: [
-      "assets/images/lanyard-1.webp",
+      "assets/images/lanyard-coleccion.webp",
       "assets/images/lanyard-2.webp",
       "assets/images/lanyard-3.webp"
     ],
@@ -125,7 +125,7 @@ const NOUR_PRODUCTS = {
     description: "Café NOUR, edición Colombia.",
     price: 12,
     images: [
-      "assets/images/cafe-colombia.webp"
+      "assets/images/cafe-colombia-coleccion.webp"
     ],
     details: [
       {
@@ -154,8 +154,7 @@ const NOUR_PRODUCTS = {
     description: "Taza NOUR de cerámica.",
     price: 16,
     images: [
-      "assets/images/taza-1.webp",
-      "assets/images/taza-2.webp",
+      "assets/images/taza-1-coleccion.webp",
       "assets/images/taza-3.webp"
     ],
     details: [
@@ -184,7 +183,7 @@ const NOUR_PRODUCTS = {
     description: "Journal NOUR en acabado oliva.",
     price: 14,
     images: [
-      "assets/images/journal-1.webp",
+      "assets/images/journal-1-coleccion.webp",
       "assets/images/journal-2.webp",
       "assets/images/journal-3.webp"
     ],
@@ -214,7 +213,7 @@ const NOUR_PRODUCTS = {
     description: "Café NOUR, edición Brasil.",
     price: 16,
     images: [
-      "assets/images/cafe-brasil.webp"
+      "assets/images/cafe-brasil-coleccion.webp"
     ],
     details: [
       {
@@ -243,7 +242,7 @@ const NOUR_PRODUCTS = {
     description: "Gorra NOUR en color burdeos.",
     price: 24,
     images: [
-      "assets/images/gorra-1.webp",
+      "assets/images/gorra-coleccion.webp",
       "assets/images/gorra-2.webp",
       "assets/images/gorra-3.webp",
       "assets/images/gorra-4.webp"
@@ -274,9 +273,7 @@ const NOUR_PRODUCTS = {
     description: "Camiseta NOUR en color crudo.",
     price: 35,
     images: [
-      "assets/images/nour-space.png",
-      "assets/images/nour-space.png",
-      "assets/images/nour-space.png"
+      "assets/images/camiseta-1.webp"
     ],
     details: [
       {
@@ -304,7 +301,7 @@ const NOUR_PRODUCTS = {
     description: "El café que servimos en NOUR, también para preparar en casa.",
     price: 11,
     images: [
-      "assets/images/cafe-nour.webp"
+      "assets/images/cafe-nour-coleccion.webp"
     ],
     option: {
       label: "MOLIENDA",

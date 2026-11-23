@@ -20,7 +20,7 @@
       meta: "Orígenes",
       price: 18,
       images: [
-        "assets/images/nour-space.png"
+        "assets/images/portada-nour-00.webp"
       ]
     };
 
@@ -92,7 +92,7 @@
       product.images.length
         ? product.images
         : [
-            "assets/images/nour-space.png"
+            "assets/images/portada-nour-00.webp"
           ];
 
     thumbnails.replaceChildren();
@@ -321,7 +321,7 @@
           safeQuantity,
         image:
           product.images?.[0] ||
-          "assets/images/nour-space.png"
+          "assets/images/portada-nour-00.webp"
       });
 
     }

@@ -258,7 +258,7 @@
     image.src =
       product?.images?.[0] ||
       item.image ||
-      "assets/images/nour-space.png";
+      "assets/images/camiseta-1.webp";
 
     image.alt =
       displayName;
